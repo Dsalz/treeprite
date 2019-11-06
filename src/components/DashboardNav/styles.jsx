@@ -1,18 +1,18 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Nav = styled.div`
-width: 100%;
-height: 80px;
-background: ${props => props.theme.white};
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding:0 20px;
-border-bottom: .5px solid rgba(0, 0, 0, 0.25);
--webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
--moz-box-shadow:    0px 0px 4px rgba(0, 0, 0, 0.25);  /* Firefox 3.5 - 3.6 */
-box-shadow:        0px 0px 4px rgba(0, 0, 0, 0.25);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-`
+  width: 100%;
+  height: 80px;
+  background: ${props => props.theme.white};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); /* Firefox 3.5 - 3.6 */
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+`;
 export const NavLink = styled.div`
 display: flex;
 align-items: center;
@@ -22,6 +22,9 @@ height: 100%;
 background-color: ${props => props.theme.transparent};
 transition: 0.5s;
 margin:0;
+@media (max-width: 400px){
+  width: 50px;
+}
 // margin-left:auto;
 a {
   text-decoration: none;
@@ -79,25 +82,24 @@ ul {
   font-weight: bold;
   // color: ${props => props.theme.blue};
 }
-`
+`;
 
 export const AdminWrapper = styled.div`
-width: 100%;
-height: 40px;
-background: ${props => props.theme.gray};
-display: flex;
-justify-content: center ;
-align-items: center;
-border-radius: 3px;
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 16px;
-color: rgba(0, 0, 0, 0.7);
-span{
-  font-weight: bold;
-  margin: 0 5px;
-}
-`
-
+  width: 100%;
+  height: 40px;
+  background: ${props => props.theme.gray};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  span {
+    font-weight: bold;
+    margin: 0 5px;
+  }
+`;

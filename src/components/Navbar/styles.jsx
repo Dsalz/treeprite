@@ -1,37 +1,37 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Nav = styled.div`
-// position:absolute;
-// top:0;
-width: 100%;
-height: 80px;
-background: ${props => props.theme.transparent};
-display: flex;
-justify-content: flex-start;
-align-items: center;
-padding:0 20px;
-margin: 0 0 1px;
-z-index:2;
--webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
--moz-box-shadow:    0px 0px 4px rgba(0, 0, 0, 0.25);  /* Firefox 3.5 - 3.6 */
-box-shadow:        0px 0px 4px rgba(0, 0, 0, 0.25);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-// -webkit-animation-name: navbar; /* Safari 4.0 - 8.0 */
-// -webkit-animation-duration: 1.1s; /* Safari 4.0 - 8.0 */
-// -webkit-animation-timing-function: ease-in;
-//   animation-timing-function: ease-in;
-//   animation-name: navbar;
-//   animation-duration: 1.1s;
-//   @-webkit-keyframes navbar {
-//     from {transform: translateY(-100px);}
-//     to {transform: translateY(0px);}
-//   }
-  
-//   /* Standard syntax */
-//   @keyframes navbar {
-//     from {transform: translateY(-100px);}
-//     to {transform: translateY(0px);}
-//   }
-`
+  // position:absolute;
+  // top:0;
+  width: 100%;
+  height: 80px;
+  background: ${props => props.theme.transparent};
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0 0 1px;
+  z-index: 2;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); /* Firefox 3.5 - 3.6 */
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  // -webkit-animation-name: navbar; /* Safari 4.0 - 8.0 */
+  // -webkit-animation-duration: 1.1s; /* Safari 4.0 - 8.0 */
+  // -webkit-animation-timing-function: ease-in;
+  //   animation-timing-function: ease-in;
+  //   animation-name: navbar;
+  //   animation-duration: 1.1s;
+  //   @-webkit-keyframes navbar {
+  //     from {transform: translateY(-100px);}
+  //     to {transform: translateY(0px);}
+  //   }
+
+  //   /* Standard syntax */
+  //   @keyframes navbar {
+  //     from {transform: translateY(-100px);}
+  //     to {transform: translateY(0px);}
+  //   }
+`;
 export const NavLink = styled.div`
 display: flex;
 align-items: center;
@@ -70,6 +70,10 @@ ul {
   justify-content:center;
   align-items:center;
   flex-wrap:nowrap;
+  @media (max-width: 500px){
+    width: auto;
+    margin: 9px;
+  }
 }
 
  ul li a {
@@ -85,22 +89,25 @@ ul {
   font-size: 14px;
   line-height: 16px;
   text-transform: inherit;
-  color: ${props => props.altNavItemsColor ? props.theme.white : props.theme.black};
+  color: ${props =>
+    props.altNavItemsColor ? props.theme.white : props.theme.black};
+  @media (max-width: 500px){
+    font-size: 10px;
+  }
 }
 
 
  ul li.active a span {
   font-weight: bold;
 }
-`
+`;
 
 export const AdminWrapper = styled.div`
-width: 100px;
-height: 40px;
-background: ${props => props.theme.gray};
-display: flex;
-justify-content: space-between ;
-align-items: center;
-border-radius: 3px;
-`
-
+  width: 100px;
+  height: 40px;
+  background: ${props => props.theme.gray};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+`;
